@@ -1,0 +1,92 @@
+курсовая работа - современные технологии анализа данных 
+========================================================
+
+(по руский)
+Задачи:
+1. Классификация и кластеризация данных
+    на любом языке программирования, можно использовать любые пакеты
+    классическими методами
+    данные из тех что отправила я или согласовать свой вариант со мной
+    
+2. Построение симплициальных комплексов и их инвариантов - диаграмм персистентности,
+нахождение метрик (Вассерштайна, узкого места) - классификация и кластеризация полученных метрик
+    на любом языке программирования, можно использовать любые пакеты
+ 
+3. (усложненный вариант, можно взять набор данных проще)
+Реализуется на Python (или если хотите напрямую на Julia) с использованием пакета Eirene (TDA на Julia)
+    Построение симплициальных комплексов и отслежование нулевых групп гомологий - классификация на основе нулевых групп гомологий
+ 
+1 — обязательно, 2 или 3 — по выбору
+
+
+(in english)
+
+Tasks:
+1. Classification and clustering of data
+     in any programming language, you can use any packages
+     classical methods
+     data from those that I sent or agree on your option with me
+    
+2. Construction of simplicial complexes and their invariants - persistence diagrams,
+finding metrics (Wasserstein, bottleneck) - classification and clustering of obtained metrics
+     in any programming language, you can use any packages
+ 
+3. (complicated version, you can take a simpler data set)
+Implemented in Python (or directly in Julia if you prefer) using the Eirene package (TDA on Julia)
+     Construction of simplicial complexes and tracking of zero homology groups - 
+     classification based on zero homology groups
+ 
+
+Questions
+Ир, привет!
+Можно несколько вопросов задать по курсовой?
+1.Ты на лекции говорила, что временную задержку подобрала исходя из некоего предварительного анализа временного ряда
+Какой именно анализ подразумевался? Требуется ли нам его проводить или мы можем условно взять с потолка 8-ку?
+2.Классификация топологическими методами подразумевает использование машинного обучения, но не в том виде, как 
+ты показывала на лекции, а каким-то своим способом учёта метрик Вассерштайна, узкого места и Lp?
+3. Нужно ли по курсовой писать отчёт или сдача задания будет производиться в ходе просмотра и обсуждения 
+результатов, полученных в Jupiter notebook?
+
+Ir, hola!
+¿Puedo hacer algunas preguntas sobre el trabajo del curso?
+1. Dijiste en la conferencia que elegiste el retraso de tiempo basado en un análisis preliminar de la serie de tiempo.
+¿A qué tipo de análisis se refería? ¿Necesitamos llevarlo a cabo o podemos tomar condicionalmente un 8-ku del techo?
+2. La clasificación por métodos topológicos implica el uso de aprendizaje automático, pero no de la misma manera que
+usted mostró en la conferencia, pero en su propia forma de tener en cuenta las métricas de Wasserstein, cuello de botella y Lp?
+3. ¿Necesito escribir un informe sobre el trabajo del curso o se enviará la tarea durante la visualización y discusión?
+resultados obtenidos en el cuaderno de Júpiter?
+
+code:
+embedding_dimension_periodic = 3
+embedding_time_delay_periodic = 8
+embedder = SingleTakensEmbedding(
+	parameters_type = "fixed",
+	time_delay = embedding_time_delay_periodic,
+	dimension = embedding_dimension_periodic
+)
+
+
+
+Additional comments of Irina
+
+In Russian:
+2 Для классификации можно использовать средний ландшафт персистентности (для всех данных), 
+от него возврат к диаграмме и соответствующим ей инвариантам и уже от них считать метрики и 
+в пространстве полученных метрик производить классификацию любым способом из ml
+Это можете сказать всем
+3 отчет не нужен
+Пока в четверг последняя очная лекция от Сергея Камаловича, а на следующей неделе 
+если нужно онлайн со мной ответы на ваши вопросы
+
+In spanish:
+1) check the link:
+https://giotto-ai.github.io/gtda-docs/latest/modules/generated/time_series/embedding/gtda.time_series.takens_embedding_optimal_parameters.html#gtda.time_series.takens_embedding_optimal_parameters
+2 Para la clasificación, puede usar el paisaje de persistencia promedio (para todos los datos),
+de él volver al diagrama y las invariantes correspondientes a él y de ellos calcular las métricas y
+en el espacio de métricas obtenidas, clasifique por cualquier método de ml
+Puedes decirle a todos
+3 informe no es necesario
+Hasta ahora, el jueves, la última conferencia presencial de Sergei Kamalovich, y la próxima semana
+si necesitas online conmigo respuestas a tus preguntas
+
+
